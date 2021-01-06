@@ -1,0 +1,18 @@
+1349.0 BsToMuMu_13+DIGIUP15+RECOUP15+HARVESTUP15 [1]: cmsDriver.py BsToMuMu_13TeV_SoftQCDnonD_TuneCUEP8M1_cfi.py  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --relval 21000000,150000 -s GEN,SIM --datatier GEN-SIM --beamspot Realistic50ns13TeVCollision
+                                           [2]: cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT
+                                           [3]: cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM
+                                           [4]: cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM --era Run2_2016 -n 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
